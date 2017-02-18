@@ -1,36 +1,33 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
+<!DOCTYPE html>
+<html>
+  <head>
       <!--Import Google Icon Font-->
       <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
       <!--Import materialize.css-->
-<meta charset="utf-8"/>
-      <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
-<link href="iconfont/material-icons.css" rel="stylesheet">
+  <meta charset="utf-8"/>
+  <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+  <link href="iconfont/material-icons.css" rel="stylesheet">
 
-<!--<link rel="stylesheet" href="../css/materialdesignicons.min.css" >-->
+      <!--<link rel="stylesheet" href="../css/materialdesignicons.min.css" >-->
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<script type="text/javascript" src="../js/jquery-3.0.0.js">
-</script>
-<script type="text/javascript" src="../js/materialize.min.js">
-</script>
-<script type="text/javascript" src="../js/engine.js">
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="../js/jquery-3.0.0.js">
+  </script>
+  <script type="text/javascript" src="../js/materialize.min.js">
+  </script>
+  <script type="text/javascript" src="../js/engine.js">
+  </script>
 
-    
-<script>
-$( document ).ready(function(){
-	
+  <script>
+    $( document ).ready(function(){	
+      $(".button").sideNav();
+      $(".input-field").collapsible();
 
-    $(".button").sideNav();
-        $(".input-field").collapsible();
-
-$(".btn-large").hover(function(){
-    $(".btn-large").toggleClass("white");  
-$(".btn-large").toggleClass("light-blue");
-});
+      $(".btn-large").hover(function(){
+        $(".btn-large").toggleClass("white");  
+        $(".btn-large").toggleClass("light-blue");
+    });
 
 $("input").focus(function(){
 
@@ -95,19 +92,19 @@ $('.btn-large').remove();
 
 .nav2:hover {
     width: 55%;
-margin-top: 0px;
+    margin-top: 0px;
 }
 
 .btn-large{
--webkit-transition: border width 0.5s ease-in-out;
+    -webkit-transition: border width 0.5s ease-in-out;
     transition: border width 0.5s ease-in-out;
 /*border:0px solid black;*/
-width: 20%;
+    width: 20%;
 }
 
 .btn-large:hover{
 /*border: 5px solid grey;*/
-width: 25%;
+    width: 25%;
 }
 
 
@@ -119,15 +116,14 @@ width: 25%;
 }
 .mainHeading h1{ 
     font-family: "OldeEnglish", Verdana, Tahoma;
-     
-     margin-top: 6%;
+    margin-top: 6%;
 }
 .preloader-wrapper{
-display: none;
+    display: none;
 }
 
 .results-card{
-margin: 0 auto;
+    margin: 0 auto;
 }
 
 @font-face {
@@ -137,27 +133,23 @@ margin: 0 auto;
     src: local('namaste'), local('namaste'), url(fonts/namaste.ttf) format("truetype");
 }
 ul li a{
--webkit-transition: 0.2s;
-	-moz-transition: 0.2s;
-	-o-transition: 0.2s; 
-	transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s; 
+    transition: 0.2s;
 }
 
 ul li a:hover{
-padding:0px 30px 0px 40px;
-font-size: 1em;
-background-color:#212121;
-box-shadow: 0px 0px 10px #212121;
-text-shadow: 0px 0px 2px white;
+  padding:0px 30px 0px 40px;
+  font-size: 1em;
+  background-color:#212121;
+  box-shadow: 0px 0px 10px #212121;
+  text-shadow: 0px 0px 2px white;
 }
 
 </style>
 </head>
-
-    <body>
-
- 
-  
+  <body>
   <nav class="navigation">
     <div class="nav-wrapper grey darken-4">
       <a href="#!" class="brand-logo center mainHeading"><span style="font-size: 40px; font-family: 'OldeEnglish';">The Dictionary</span></a>
@@ -166,7 +158,7 @@ text-shadow: 0px 0px 2px white;
 <a href="#" data-activates="mobile-demo" class="button left"><i class="material-icons">menu</i></a>
 </ul>
       <ul class="right hide-on-med-and-down">      
-  <li class="actived"><a href="#"><i class="material-icons">view_module</i></a></li>
+        <li class="actived"><a href="#"><i class="material-icons">view_module</i></a></li>
         <li class="actived"><a href="#">Add Words</a></li>
         <li><a href="#">Documentation</a></li>
         <li><a href="#">About Project</a></li>
@@ -248,7 +240,7 @@ text-shadow: 0px 0px 2px white;
         <li class="tab col s4"><a class="waves-effect waves-light" href="#hindi" style="font-family:namaste; font-size: 30px;">Hindi</a>
         </li>
       </ul>
-    </div>
+</div>
     
 
 
@@ -293,6 +285,3 @@ text-shadow: 0px 0px 2px white;
 </div>
 </body>
 </html>
-        
-
-
