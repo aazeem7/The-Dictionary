@@ -1,0 +1,62 @@
+.nav2 {
+    -webkit-transition: width 0.9s ease-in-out;
+    transition: width 0.9s ease-in-out;
+    width: 50%;
+	}
+
+.nav2:hover {
+    width: 55%;
+    margin-top: 0px;
+}
+
+.btn-large{
+    -webkit-transition: border width 0.5s ease-in-out;
+    transition: border width 0.5s ease-in-out;
+/*border:0px solid black;*/
+    width: 20%;
+}
+
+.btn-large:hover{
+/*border: 5px solid grey;*/
+    width: 25%;
+}
+
+
+@font-face {
+    font-family: "OldeEnglish";
+    font-style: "normal";
+    font-weight: "700";
+    src: local('OldeEnglish'), local('OldeEnglish'), url(../TheDictionary/fonts/OldeEnglish.ttf) format("truetype");
+}
+.mainHeading h1{ 
+    font-family: "OldeEnglish", Verdana, Tahoma;
+    margin-top: 6%;
+}
+.preloader-wrapper{
+    display: none;
+}
+
+.results-card{
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "namaste";
+    font-style: "normal";
+    font-weight: "700";
+    src: local('namaste'), local('namaste'), url(../TheDictionary/fonts/namaste.ttf) format("truetype");
+}
+ul li a{
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s; 
+    transition: 0.2s;
+}
+
+ul li a:hover{
+  padding:0px 30px 0px 40px;
+  font-size: 1em;
+  background-color:#212121;
+  box-shadow: 0px 0px 10px #212121;
+  text-shadow: 0px 0px 2px white;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!--Import Google Icon Font-->
+      <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+      <!--Import materialize.css-->
+  <meta charset="utf-8"/>
+  <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+  <link href="iconfont/material-icons.css" rel="stylesheet">
+  <link href="../css/engine.css" rel="stylesheet">
+
+
+      <!--<link rel="stylesheet" href="../css/materialdesignicons.min.css" >-->
+      <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="../js/jquery-3.0.0.js">
+  </script>
+  <script type="text/javascript" src="../js/materialize.min.js">
+  </script>
+  <script type="text/javascript" src="../js/engine.js">
+  </script>
+
+  <script>
+    $( document ).ready(function(){	
+      $(".button").sideNav();
+      $(".input-field").collapsible();
+
+      $(".btn-large").hover(function(){
+        $(".btn-large").toggleClass("white");  
+        $(".btn-large").toggleClass("light-blue");
+    });
+
+$("input").focus(function(){
+
+$("h1").animate(
+        {
+        opacity: '0.9',
+        fontSize: '70px',
+        marginTop: '100px',
+    //    left: '250px'
+},1000
+        
+);
+
+});
+//$("input").keydown(function(){
+//console.log('changes starts to occur');
+//alert('Keypress working');
+//
+//$(".preloader-wrapper").toggle();
+//});
+
+/*$("input[id=search]").on("focus", function() {
+$('#hero').remove();
+$('center').contents().unwrap().delay(100000);
+
+$("input[id=search]").animate({
+
+
+});
+ 
+});*/
+
+
+//$("input").keydown(function(){
+//console.log('changes starts to occur');
+//alert('Keypress working');
+//
+//$(".preloader-wrapper").toggle();
+//});
+
+$("input[id=search]").on("focus", function() {
+$('#hero').remove();
+$('.btn-large').remove();
+
+//$('.results-card').css({ "display": "block" });
+
+ 
+});
+
+
+
+});
+
+</script>
+
+
+</head>
+  <body>
+  <nav class="navigation">
+    <div class="nav-wrapper grey darken-4">
+      <a href="#!" class="brand-logo center mainHeading"><span style="font-size: 40px; font-family: 'OldeEnglish';">The Dictionary</span></a>
+      
+<ul class="left">
+<a href="#" data-activates="mobile-demo" class="button left"><i class="material-icons">menu</i></a>
+</ul>
+      <ul class="right hide-on-med-and-down">      
+        <li class="actived"><a href="#"><i class="material-icons">view_module</i></a></li>
+        <li class="actived"><a href="#">Add Words</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">About Project</a></li>
+      </ul>
+
+      <!--Mobile Navigation Begins Here -->
+      <div class="side-nav purple darken-3" id="mobile-demo">
+        <!--<li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">Mobile</a></li> -->
+        <h3>control panel</h3>
+        <center>
+        <div class="colorChooser" style="height: 200px; width:95%; background-color: #2C323C;"></div>
+        </center>
+
+      </div>
+    </div>
+  </nav>
+
+      
+
+        
+	<!--<div class="valign valign-wrapper">
+          <div class="valign center" style="width: 100%; background-color: white; color:white;">This should be vertically aligned
+<br> <center>
+
+<div class="wrappers" style="width: 50%;">
+<input type="text" name="search Box">
+</div>
+
+        <form>
+        <div class="input-field" style="width: 50%;">
+		  <input id="search" type="search" placeholder="Search" required>
+          
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+ 
+
+</center>
+</div> 
+      <div class="valign center" style="width: 200px; height: 200px; background-color: black; color: white;">Hello World</div>
+    
+
+</div>  -->      
+<center>
+
+<span class="mainHeading" id="hero"><h1 style="font-size: 100px;"><span style="font-size: 150px;">T</span>he<br>Dictionar<span style="font-size: 150px;">y</span></h1> </span>	
+      <form method="post" action="next.php">
+<nav class="nav2" style="widths: 80%">
+    <div class="nav-wrapper myColors white" >
+        <div class="input-field hoverable" >
+	          <input id="search" type="search" placeholder="Search" autocomplete="off" name="srh" required tabindex="1">
+
+          <label for="search"><i class="material-icons" style="color: gray;">search</i></label>
+            
+
+        </div>    
+
+<!--<a class="waves-effect waves-light btn-large">Button</a>-->
+    </div>
+</center>
+
+  </nav>
+<center>
+<button class="waves-effect waves-light btn-large white" style="margin-top: 5%; color: black;" type="submit">Search</button>
+  </form>
+
+<!--<p class="customfont">Hello world!</p>-->
+  </center>
+
+<!-- Result Card -->
+<div class="container">
+<div class="col s12">
+      <ul class="tabs grey darken-4">
+        <li class="tab col s3"><a class="waves-effect waves-light active white-text" href="#eng" style="font-sizes:30px;">English</a></li>
+        <li class="tab col s4"><a class="waves-effect waves-light" href="#hindi" style="font-family:namaste; font-size: 30px;">Hindi</a>
+        </li>
+      </ul>
+</div>
+    
+
+
+
+<div class="card results-card" style="Display:block;">
+    
+
+  <div class="row">
+    
+    <div id="eng" style="margin-left: 10px;" class="col s11">
+	<h2 class="word">Apple</h2>
+	
+	<h5 class="type1">noun</h5>
+	<h6 class="type2">noun: apple; plural noun: apples; noun: apple tree; plural noun: apple trees</h6>
+	<h5 class="type3">Definition:</h5>
+	<p class="definition"> 
+	1.
+	the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh. 
+	used in names of unrelated fruits or other plant growths that resemble apples in some way, e.g. custard apple, oak apple.
+	<br>
+	2.the tree bearing apples, with hard pale timber that is used in carpentry and to smoke food.
+	1.
+	the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
+	used in names of unrelated fruits or other plant growths that resemble apples in some way, e.g. custard apple, oak apple.
+	<br>
+	2.the tree bearing apples, with hard pale timber that is used in carpentry and to smoke food.
+	1.
+	the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
+	used in names of unrelated fruits or other plant growths that resemble apples in some way, e.g. custard apple, oak apple.
+  <br>
+	2.the tree bearing apples, with hard pale timber that is used in carpentry and to smoke food.
+	
+	</p>
+	</div>
+    
+  <div id="hindi" class="col s12"><h1>सेब</h1></div>
+  </div>
+</div>
+</div>
+</body>
+</html>
