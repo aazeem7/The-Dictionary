@@ -2,9 +2,11 @@ h6.type2{
 	font-family:sans; 
 	opacity: 0.8;
 }
+
 h5.type1{
 	font-style: italic;
 }
+
 p.definition{
     text-align: justify;
 }
