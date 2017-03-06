@@ -17,7 +17,7 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 
 3.Place the Cloned Repository into the `htdocs` folder of Xampp.
 
-4.Initialize the TheDictionary/configure.php file with your xampp settings
+4.Initialize the TheDictionary/configure.php file with your Xampp Localhost settings
 
 	$localhost = 'localhost:3306';
 	$username = 'yourUserName';
@@ -27,11 +27,13 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 5.Download the Database from
 
 	https://someLinks
+And Import the Database to phpMyAdmin in Xampp Control Panel.
 
 6.That's it, Now 
+
 	1. Run Your Xampp Server from the Control Panel.
 
 	2. Open Your Web Browser.
 
-	3. Type in the address bar `localhost/dictionary/TheDictionary/` to get Started 
+	3. Type in the address bar `localhost/dictionary/TheDictionary/` to get Started. 
 
