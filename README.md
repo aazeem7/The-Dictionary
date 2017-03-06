@@ -30,6 +30,8 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 
 6.That's it, Now 
 	1. Run Your Xampp Server from the Control Panel.
+
 	2. Open Your Web Browser.
+
 	3. Type in the address bar `localhost/dictionary/TheDictionary/` to get Started 
 
