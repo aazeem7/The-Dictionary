@@ -10,6 +10,7 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 
 ###Setting Up
 1.Install the Xampp Server version 7.0.13-0 , if you don't have it already.
+
 2.Clone the Repository to your Machiene via git.
 	
     git clone https://github.com/mark-37/The-Dictionary.git
