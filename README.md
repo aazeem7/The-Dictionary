@@ -26,7 +26,7 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 
 5.Download the Database from
 
-	https://someLinks
+	https://www.dropbox.com/s/nay2wivmoygea5p/dictionaryStudyTool.sql?dl=0
 And Import the Database to phpMyAdmin in Xampp Control Panel.
 
 6.That's it, Now 
