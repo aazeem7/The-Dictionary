@@ -15,9 +15,8 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 	
     git clone https://github.com/mark-37/The-Dictionary.git
 
-3.Download the Database from
+3.Place the Cloned Repository into the `htdocs` folder of Xampp.
 
-	https://someLinks
 4.Initialize the TheDictionary/configure.php file with your xampp settings
 
 	$localhost = 'localhost:3306';
@@ -25,5 +24,12 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 	$passwd = 'yourPassword';
 	$db = 'entries';
 
-5.Place the Cloned Repository into the `htdocs` folder of Xampp.
+5.Download the Database from
+
+	https://someLinks
+
+6.That's it, Now 
+	1. Run Your Xampp Server from the Control Panel.
+	2. Open Your Web Browser.
+	3. Type in the address bar `localhost/dictionary/TheDictionary/` to get Started 
 
