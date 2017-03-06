@@ -1,11 +1,8 @@
 <?php
 //    require_once ('config.php');
+   require 'configure.php';
 
-    $q=$_REQUEST["q"]; 
-$dbhost = 'localhost:3306';
-$dbuser = 'root';
-$dbpass = 'root';
-$database = 'dictionary';
+$q=$_REQUEST["q"]; 
 $q = trim($q);
 try{    
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $database);

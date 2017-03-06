@@ -1,4 +1,5 @@
 <?php
+require 'configure.php';
  
 $word = $_POST["srh"];
 echo "The Inputted Word is $word"."<br>";
@@ -6,10 +7,7 @@ echo "The Inputted Word is $word"."<br>";
 /*if (strcmp($word,trim($word))){
 echo "String Equals";
 } else { echo "String Not equals";} */
-$dbhost = 'localhost:3306';
-$dbuser = 'root';
-$dbpass = 'root';
-$database = 'dictionary';
+
 try{
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $database);
 /* check connection */
