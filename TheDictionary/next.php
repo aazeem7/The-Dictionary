@@ -22,7 +22,7 @@ $query = "SELECT * from entries where word LIKE '$word'";
 $result = $conn->query($query);
 $row = $result->fetch_assoc();
 $counter = 0;
-if (!$row) {
+if (!$row) {	
 printf("<h1>No word Found</h1>");
 exit();
 }

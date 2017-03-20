@@ -1,4 +1,4 @@
-.nav2 {
+.nav2 { 
     -webkit-transition: width 0.9s ease-in-out;
     transition: width 0.9s ease-in-out;
     width: 50%;
@@ -9,14 +9,14 @@
     margin-top: 0px;
 }
 
-.btn-large{
+.submitBtn{
     -webkit-transition: border width 0.5s ease-in-out;
     transition: border width 0.5s ease-in-out;
 /*border:0px solid black;*/
     width: 20%;
 }
 
-.btn-large:hover{
+.submitBtn:hover{
 /*border: 5px solid grey;*/
     width: 25%;
 }
@@ -38,6 +38,7 @@
 
 .results-card{
     margin: 0 auto;
+
 }
 
 @font-face {
@@ -59,4 +60,59 @@ ul li a:hover{
   	background-color:#212121;
   	box-shadow: 0px 0px 10px #212121;
   	text-shadow: 0px 0px 2px white;
+}
+
+.card-box{
+    margin-top: 10%;
+    display: none;
+}
+
+/***************************************CUSTOM ADDED CONTENT*********************************************/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.3s; /*****************1st Transition***********************************/
+    padding-top: 60px;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5em; /*25px;*/
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: green;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mainArea {
+    transition: margin-left .4s;    /*****************2nd Transition***********************************/
+    /*padding: 16px;*/
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15%;}
+  .sidenav a {font-size: 10px;}
+}
+
+body{
+        transition: background-color 0.5s;
 }

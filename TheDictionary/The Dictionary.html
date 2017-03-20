@@ -9,6 +9,7 @@
   <link href="iconfont/material-icons.css" rel="stylesheet">
   <link href="../css/engine.css" rel="stylesheet">
 
+<link href="../../station/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
       <!--<link rel="stylesheet" href="../css/materialdesignicons.min.css" >-->
       <!--Let browser know website is optimized for mobile-->
@@ -21,14 +22,19 @@
   <script type="text/javascript" src="../js/engine.js">
   </script>
 
+  <script type="text/javascript" src="../js/ajaxConfig.js">
+  </script>
+  <script type="text/javascript" src="../js/ajaxRequest.js">
+  </script>
+
   <script>
     $( document ).ready(function(){	
       $(".button").sideNav();
       $(".input-field").collapsible();
 
-      $(".btn-large").hover(function(){
-        $(".btn-large").toggleClass("white");  
-        $(".btn-large").toggleClass("light-blue");
+      $(".submitBtn").hover(function(){
+        $(".submitBtn").toggleClass("white");  
+        $(".submitBtn").toggleClass("light-blue");
     });
 
 $("input").focus(function(){
@@ -37,7 +43,7 @@ $("h1").animate(
         {
         opacity: '0.9',
         fontSize: '70px',
-        marginTop: '100px',
+        marginTop: '2',
     //    left: '250px'
 },1000
         
@@ -62,6 +68,9 @@ $("input[id=search]").animate({
  
 });*/
 
+$('.mobile-sideNab').click(function(){
+	closeNav();
+});
 
 //$("input").keydown(function(){
 //console.log('changes starts to occur');
@@ -70,30 +79,94 @@ $("input[id=search]").animate({
 //$(".preloader-wrapper").toggle();
 //});
 
-$("input[id=search]").on("focus", function() {
+$("input[id=search]").on("keyup", function(e) {
+var input = $('#search').val();
+if (input.length > 0) {
+
 $('#hero').remove();
-$('.btn-large').remove();
+$('.submitBtn').remove();
 
-//$('.results-card').css({ "display": "block" });
+/*if( (e.which >=65 && e.which <= 90) || (e.which >=48 && e.which<=57)|| (e.which >=96 && e.which<=105) || (e.which == 8)){
 
- 
+$('.card-box').css({ "display": "none" });
+
+}*/
+
+}
 });
 
+$('#search').on('input propertychange paste', function() {
+    
+$('.card-box').css({ "display": "none" }); 
 
 
 });
+
+});
+
+  $(function() {
+    $("form").submit(function() { return false; });
+});
+
+ function test(){
+ 	//alert('Iam Invoked');
+ myAjaxFunction();
+ alertMe();
+$('.card-box').css({ "display": "block" });
+
+ }
+
+ function openNav() {
+ 	var val = "30%";
+    document.getElementById("mySidenav").style.width = val;
+    document.getElementById("mainArea").style.marginLeft = val;
+    //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("mainArea").style.paddingLeft = "0.5%";
+    $('.sideBtn').css({"display" : "none"});
+    $('.right').css({"display" : "none"});
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mainArea").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+    document.getElementById("mainArea").style.paddingLeft = "0%";
+    $('.sideBtn').css({"display" : "block"});
+    $('.right').css({"display" : "block"});
+}
+
+function alertMe(){
+	
+	var input = $('#search').val();
+	var str = "searching for \"" + input +"\"";
+	Materialize.toast(str, 1000,'custom');
+	//alert('Iam Invoked afterwords');
+}
+
 
 </script>
 
 
 </head>
   <body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>	
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<div id="mainArea">
+
   <nav class="navigation">
     <div class="nav-wrapper grey darken-4">
-      <a href="#!" class="brand-logo center mainHeading"><span style="font-size: 40px; font-family: 'OldeEnglish';">The Dictionary</span></a>
+      <a href="The Dictionary.html" class="brand-logo center mainHeading"><span style="font-size: 40px; font-family: 'OldeEnglish';">The Dictionary</span></a>
       
 <ul class="left">
-<a href="#" data-activates="mobile-demo" class="button left"><i class="material-icons">menu</i></a>
+<a href="#" data-activates="mobile-demo" class="button left mobile-sideNab"><i class="material-icons">menu</i></a>
 </ul>
       <ul class="right hide-on-med-and-down">      
         <li class="actived"><a href="#"><i class="material-icons">view_module</i></a></li>
@@ -115,11 +188,13 @@ $('.btn-large').remove();
 
       </div>
     </div>
-
   </nav>
+<br>
+<a class="btn-floating btn-large waves-effect waves-dark white sideBtn"><i class="material-icons md-dark menu" onclick="openNav()">menu</i></a>
 
-      <a href="https://github.com/mark-37/The-Dictionary"><img style="position: relative; left: 89%; border: 0; z-index: 1000;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
+      <!--<a href="https://github.com/mark-37/The-Dictionary"><img style="position: relative; left: 89%; border: 1px solid black; z-index: 1000;" 
+src="forkme.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a> -->
         
 	<!--<div class="valign valign-wrapper">
           <div class="valign center" style="width: 100%; background-color: white; color:white;">This should be vertically aligned
@@ -147,9 +222,11 @@ $('.btn-large').remove();
 </div>  -->      
 <center>
 
+	<span class="mainHeading" id="hero"><h1 style="font-size: 100px;"><span style="font-size: 150px;">T</span>he<br>Dictionar<span style="font-size: 150px;">y</span></h1> 
+	</span>
 
-<span class="mainHeading" id="hero"><h1 style="font-size: 100px;"><span style="font-size: 150px;">T</span>he<br>Dictionar<span style="font-size: 150px;">y</span></h1> </span>	
-      <form method="post" action="next.php">
+      <form method="post" id="formed" onsubmit="test()">
+
 <nav class="nav2" style="widths: 80%">
     <div class="nav-wrapper myColors white" >
         <div class="input-field hoverable" >
@@ -162,18 +239,19 @@ $('.btn-large').remove();
 
 <!--<a class="waves-effect waves-light btn-large">Button</a>-->
     </div>
+</nav>
+<button class="waves-effect waves-light btn-large white submitBtn" style="margin-top: 5%; color: black;" type="submit">Search</button>
+</form>
+
 </center>
 
-  </nav>
-<center>
-<button class="waves-effect waves-light btn-large white" style="margin-top: 5%; color: black;" type="submit">Search</button>
-  </form>
+  
 
-<!--<p class="customfont">Hello world!</p>-->
-  </center>
+
+
 
 <!-- Result Card -->
-<div class="container">
+<div class="container card-box">
 <div class="col s12">
       <ul class="tabs grey darken-4">
         <li class="tab col s3"><a class="waves-effect waves-light active white-text" href="#eng" style="font-sizes:30px;">English</a></li>
@@ -183,7 +261,7 @@ $('.btn-large').remove();
 </div>
     
 
-
+<!--*******************************************RESULT CARD**************************************************************-->
 
 <div class="card results-card" style="Display:block;">
     
@@ -196,7 +274,7 @@ $('.btn-large').remove();
 	<h5 class="type1">noun</h5>
 	<h6 class="type2">noun: apple; plural noun: apples; noun: apple tree; plural noun: apple trees</h6>
 	<h5 class="type3">Definition:</h5>
-	<p class="definition"> 
+	<p class="Definition"> 
 	1.
 	the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh. 
 	used in names of unrelated fruits or other plant growths that resemble apples in some way, e.g. custard apple, oak apple.
@@ -210,15 +288,20 @@ $('.btn-large').remove();
 	1.
 	the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
 	used in names of unrelated fruits or other plant growths that resemble apples in some way, e.g. custard apple, oak apple.
-  <br>
+  <br>		
 	2.the tree bearing apples, with hard pale timber that is used in carpentry and to smoke food.
 	
 	</p>
 	</div>
     
-  <div id="hindi" class="col s12"><h1>सेब</h1></div>
+  <div id="hindi" class="col s11"><h1>सेब</h1>
+  </div>
   </div>
 </div>
+</div><br>
+<center>
+<a href="https://github.com/mark-37/The-Dictionary"><i class="fa fa-github fa-2x" aria-hidden="true" style="color: black; position: fixed;"></i></a>
+</center>
 </div>
 </body>
 </html>
