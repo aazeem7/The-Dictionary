@@ -1,4 +1,4 @@
-#The-Dictionary
+# The-Dictionary
 The Dictionary is a web based Application which provides user the a powerful tool to search words and their meanings.It helps people in increasing their
 vocabulary and helping them better understand the material they read.
 The Dictionary runs on a powerful database consisting of 1,76,023+ words.
@@ -8,7 +8,7 @@ Soon it will be able to translate the words and their meanings into Hindi Langua
 * XAMPP SERVER WITH 7.0.421
 * PHP 7
 
-###Setting Up
+### Setting Up
 1.Install the Xampp Server version 7.0.13-0 , if you don't have it already.
 
 2.Clone the Repository to your Machiene via git.
